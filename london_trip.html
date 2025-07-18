@@ -57,12 +57,12 @@
 
     <nav class="bg-gray-200 p-2 sticky top-[76px] z-20 shadow">
         <div class="container mx-auto flex justify-center flex-wrap gap-2" id="day-nav">
-            <button data-day="saturday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow active">שבת 3.8</button>
-            <button data-day="sunday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">ראשון 4.8</button>
-            <button data-day="monday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">שני 5.8</button>
-            <button data-day="tuesday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">שלישי 6.8</button>
-            <button data-day="wednesday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">רביעי 7.8</button>
-            <button data-day="thursday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">חמישי 8.8</button>
+            <button data-day="saturday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow active">שבת 2.8</button>
+            <button data-day="sunday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">ראשון 3.8</button>
+            <button data-day="monday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">שני 4.8</button>
+            <button data-day="tuesday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">שלישי 5.8</button>
+            <button data-day="wednesday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">רביעי 6.8</button>
+            <button data-day="thursday" class="nav-btn px-4 py-2 rounded-full bg-white text-gray-700 shadow">חמישי 7.8</button>
         </div>
     </nav>
 
@@ -92,7 +92,7 @@
                 <img src="map_sunday.jpg" alt="" onerror="this.onerror=null;this.src='https://placehold.co/600x350/E0E7FF/374151?text=מפה+לא+זמינה';" />
             </div>
             <div class="space-y-4" id="itinerary-sunday">
-                   
+                        
 </div>
         </div>
 
@@ -106,7 +106,7 @@
                 <img src="map_monday.jpg" alt="" onerror="this.onerror=null;this.src='https://placehold.co/600x350/E0E7FF/374151?text=מפה+לא+זמינה';" />
             </div>
             <div class="space-y-4" id="itinerary-monday">
-                   
+                        
 </div>
         </div>
 
@@ -120,7 +120,7 @@
                 <img src="map_tuesday.jpg" alt="" onerror="this.onerror=null;this.src='https://placehold.co/600x350/E0E7FF/374151?text=מפה+לא+זמינה';" />
             </div>
             <div class="space-y-4" id="itinerary-tuesday">
-                   
+                        
 </div>
         </div>
 
@@ -158,51 +158,48 @@
     <script>
         // Data for each day's itinerary, including map image filename
         const itineraryData = {
-            saturday: [ // Corrected from 'friday' and date moved to 3.8
+            saturday: [ // Updated date to 2.8
                 { time: '16:00-17:00', title: 'התארגנות במלון', desc: 'הגעה מנמל התעופה סטנסטד (STN) למלון THE Z HOTEL COVENT GARDEN.', travel: 'Stansted Express ל-Liverpool Street, ומשם Central Line ל-Holborn.', category: 'logistic', icon: '🏨', hours: '24/7' },
                 { time: '17:00-18:30', title: 'סיור בקובנט גארדן וכיכר טרפלגר', desc: 'שוטטות בשוק, צפייה באמני רחוב וביקור בכיכר המרכזית.', travel: 'הליכה קצרה מהמלון.', category: 'site', icon: '🏛️', hours: 'קובנט גארדן: שוק 10:00-19:00, חנויות ומסעדות משתנה; כיכר טרפלגר: 24/7' },
-                { time: '18:30-19:45', title: 'ארוחת ערב: Din Tai Fung', desc: 'מסעדת דים סאם ונודלס מצוינת (מומלץ להזמין מקום).', travel: 'הליכה קצרה מקובנט גארדן.', category: 'food', icon: '🍜', hours: '12:00-22:00' },
+                { time: '18:00', title: 'ארוחת ערב: Din Tai Fung', desc: 'מסעדת דים סאם ונודלס מצוינת (מומלץ להזמין מקום).', travel: 'הליכה קצרה מקובנט גארדן.', category: 'food', icon: '🍜', hours: '12:00-22:00', booked: true }, // Updated time to 18:00 and added booked: true
                 { time: '20:00', title: 'הצגה: "קלולס"', desc: 'מחזמר כיפי בווסט אנד.', travel: 'הליכה קצרה מאזור המסעדה.', category: 'show', icon: '🎭', hours: 'שעות הצגה משתנות, יש לבדוק באתר התיאטרון' }
             ],
-            sunday: [ // Corrected from 'saturday' and date moved to 4.8
-                { time: '09:30-10:30', title: 'הייד פארק', desc: 'טיול בפארק המלכותי, אפשר לשוט באגם.', travel: 'Piccadilly Line מהמלון ל-Hyde Park Corner.', category: 'site', icon: '🌳', hours: '05:00-חצות' },
-                { time: '10:30-11:00', title: 'גרין פארק', desc: 'הליכה נעימה דרך הפארק לכיוון ארמון בקינגהאם.', travel: 'הליכה מהייד פארק.', category: 'site', icon: '🌳', hours: '05:00-חצות' },
+            sunday: [ // Updated date to 3.8
+                { time: '09:00-10:00', title: 'הייד פארק', desc: 'טיול בפארק המלכותי, אפשר לשוט באגם.', travel: 'Piccadilly Line מהמלון ל-Hyde Park Corner.', category: 'site', icon: '🌳', hours: '05:00-חצות' },
+                { time: '10:00-11:00', title: 'גרין פארק', desc: 'הליכה נעימה דרך הפארק לכיוון ארמון בקינגהאם.', travel: 'הליכה מהייד פארק.', category: 'site', icon: '🌳', hours: '05:00-חצות' },
                 { time: '11:00-12:30', title: 'ארמון בקינגהאם וטקס החלפת המשמרות', desc: 'צפייה בארמון המלוכה ובטקס המפורסם (בדרך כלל בשעה 11:00, יש לוודא תאריכים מדויקים באתר הרשמי).', travel: 'הליכה קצרה מגרין פארק.', category: 'site', icon: '🏛️', hours: 'הארמון: פתוח לסיורים בחודשים מסוימים, יש לבדוק זמינות; החלפת משמרות: בדרך כלל 11:00, יש לוודא תאריכים מדויקים' },
-                { time: '12:30-14:00', title: 'ארוחת צהריים: Sticks’n’Sushi', desc: 'מסעדה מצוינת לסושי יפני (מומלץ להזמין מקום מראש).', travel: 'הליכה/טיוב מאזור הארמון.', category: 'food', icon: '🍣', hours: '12:00-22:00' },
-                { time: '14:00-15:00', title: 'ווסטמינסטר אבי (Westminster Abbey)', desc: 'ביקור בכנסייה ההיסטורית בה הוכתרו מלכי אנגליה ונישאו נסיכים.', travel: 'הליכה קצרה מ-Sticks’n’Sushi / טיוב מתחנת Westminster.', category: 'site', icon: '⛪', hours: '09:30-15:30 (יש לוודא שעות פתיחה ביום הביקור)' },
-                { time: '15:00-15:45', title: 'ביג בן וגשר ווסטמינסטר', desc: 'צפייה במגדל השעון המפורסם וחציית הגשר עם נוף ללונדון איי.', travel: 'הליכה קצרה מ-ווסטמינסטר אבי.', category: 'site', icon: '🕰️', hours: '24/7' },
-                { time: '15:45-16:15', title: 'דאונינג סטריט (Downing Street)', desc: 'מעבר ליד מעונו הרשמי של ראש ממשלת בריטניה.', travel: 'הליכה קצרה מביג בן.', category: 'site', icon: '🏛️', hours: '24/7 (כניסה אסורה לקהל הרחב, ניתן לראות מרחוק)' },
-                { time: '16:15-17:30', title: 'אופציה: מוזיאון נשים במלחמת העולם השנייה (Women in World War II Museum)', desc: 'מוזיאון קטן ומרתק המציג את תרומת הנשים במלחמת העולם השנייה. (בדקו שעות פתיחה ומיקום מדויק).', travel: 'הליכה קצרה מאזור דאונינג סטריט.', category: 'site', icon: '👩‍✈️', hours: 'יש לבדוק שעות פתיחה ותאריכים במיוחד' },
-                { time: '17:30-20:00', title: 'שופינג במרכז העיר', desc: 'Selfridges, Jo Malone, Glossier, Disney, M&M’s, Carnaby St. – השלמת קניות ושיטוט נוסף.', travel: 'באזור Oxford St, Regent St, ו-Piccadilly.', category: 'shopping', icon: '🛍️', hours: 'Selfridges: 10:00-21:00; Jo Malone: 10:00-20:00; Glossier: 10:00-19:00; Disney Store: 10:00-20:00; M&M’s London: 10:00-22:00; Carnaby Street: 10:00-19:00' },
+                { time: '12:30-13:00', title: 'ווסטמינסטר אבי (Westminster Abbey)', desc: 'ביקור בכנסייה ההיסטורית בה הוכתרו מלכי אנגליה ונישאו נסיכים. (ביקור קצר של כחצי שעה).', travel: 'הליכה קצרה מארמון בקינגהאם / טיוב מתחנת Westminster.', category: 'site', icon: '⛪', hours: '09:30-15:30 (יש לוודא שעות פתיחה ביום הביקור)' },
+                { time: '13:00-13:30', title: 'ביג בן וגשר ווסטמינסטר ודאונינג סטריט', desc: 'צפייה במגדל השעון המפורסם, חציית הגשר עם נוף ללונדון איי ומעבר ליד מעונו הרשמי של ראש ממשלת בריטניה.', travel: 'הליכה קצרה מ-ווסטמינסטר אבי.', category: 'site', icon: '🕰️', hours: '24/7 (דאונינג סטריט: כניסה אסורה לקהל הרחב, ניתן לראות מרחוק)' },
+                { time: '14:00', title: 'ארוחת צהריים: Sticks’n’Sushi', desc: 'מסעדה מצוינת לסושי יפני (הוזמן לשעה 14:00).', travel: 'הליכה/טיוב מאזור דאונינג סטריט.', category: 'food', icon: '🍣', hours: '12:00-22:00', booked: true },
+                { time: '15:00-19:00', title: 'שופינג במרכז העיר', desc: 'Selfridges, Jo Malone, Glossier, Disney, M&M’s, Carnaby St. – השלמת קניות ושיטוט נוסף.', travel: 'באזור Oxford St, Regent St, ו-Piccadilly.', category: 'shopping', icon: '🛍️', hours: 'Selfridges: 10:00-21:00; Jo Malone: 10:00-20:00; Glossier: 10:00-19:00; Disney Store: 10:00-20:00; M&M’s London: 10:00-22:00; Carnaby Street: 10:00-19:00' }, // Extended shopping time
                 { time: '20:30+', title: 'בילוי ב-West End', desc: 'אפשרות להצגה נוספת, ארוחת ערב, או פשוט ליהנות מהאווירה התוססת של רובע התיאטראות.', travel: 'הכל במרחק הליכה מאזור השופינג.', category: 'show', icon: '🎭', hours: 'שעות הצגה משתנות, מסעדות וברים פתוחים עד מאוחר' }
             ],
-            monday: [ // Corrected from 'sunday' and date moved to 5.8
+            monday: [ // Updated date to 4.8
                 { time: '09:30-11:30', title: 'קתדרלת סנט פול', desc: 'ביקור בקתדרלה המרשימה (אפשר לעלות לכיפה).', travel: 'Piccadilly Line ל-Bank או אוטובוס.', category: 'site', icon: '🏛️', hours: '08:30-16:30 (יש לבדוק ימי ראשון)' },
                 { time: '11:30-13:00', title: 'ארוחת בוקר/צהריים: Eggslut', desc: 'אם אתן חובבות ביצים, זה המקום המושלם לבראנץ\'.', travel: 'הליכה קצרה מהקתדרלה.', category: 'food', icon: '🍳', hours: '07:00-17:00' },
-                { time: '13:00-14:30', title: 'Sky Garden', desc: 'תצפית פנורמית מדהימה על לונדון (דורש הזמנה מראש!).', travel: 'הליכה קצרה מ-Eggslut.', category: 'site', icon: '🌳', hours: '10:00-18:00 (סופ"ש), 10:00-23:00 (ימי חול)' },
-                { time: '14:30-17:30', title: 'Borough Market & Southwark', desc: 'שוק אוכל מדהים עם דוכנים מכל הסוגים. מצוין לטעימות.', travel: 'הליכה ל-London Bridge או טיוב מ-St. Paul\'s.', category: 'food', icon: '🍔', hours: 'Borough Market: 10:00-17:00 (יש לבדוק ימי פעילות מלאים); Southwark: 24/7' },
+                { time: '13:00-15:00', title: 'הסתובבות ב-Shoreditch', desc: 'חקירת שכונת שורדיץ\' הטרנדית, הידועה באמנות רחוב, בוטיקים ייחודיים ובתי קפה.', travel: 'Central Line מתחנת St. Paul\'s ל-Liverpool Street, ומשם הליכה קצרה או אוטובוס.', category: 'site', icon: '🎨', hours: 'שעות משתנות לפי חנויות/גלריות' }, // Added Shoreditch
+                { time: '15:00-17:30', title: 'Borough Market & Southwark', desc: 'שוק אוכל מדהים עם דוכנים מכל הסוגים. מצוין לטעימות.', travel: 'טיוב מ-Liverpool Street ל-London Bridge.', category: 'food', icon: '🍔', hours: 'Borough Market: 10:00-17:00 (יש לבדוק ימי פעילות מלאים); Southwark: 24/7' },
                 { time: '17:30-18:30', title: 'גשר מצודת לונדון (Tower Bridge)', desc: 'חציית הגשר האייקוני וצילומים.', travel: 'הליכה מ-Borough Market.', category: 'site', icon: '🏛️', hours: 'תערוכת גשר המצודה: 09:30-18:00' },
-                { time: '19:00+', title: 'ארוחת ערב: SUSHISAMBA', desc: 'חוויה קולינרית יוקרתית עם נוף מדהים מלמעלה. ממוקם קרוב ל-Sky Garden.', travel: 'הליכה קצרה מ-Sky Garden / תחנת Liverpool Street.', category: 'food', icon: '🍣', hours: '12:00-23:00' }
+                { time: '19:00+', title: 'ארוחת ערב: Le Relais De Venise London City', desc: 'מסעדת סטייק-פריטס קלאסית עם תפריט קבוע ורוטב סודי. (ממוקמת ב-5 Throgmorton Street, City of London).', travel: 'הליכה קצרה מאזור גשר המצודה / תחנת Liverpool Street.', category: 'food', icon: '🥩', hours: '18:00-22:30 (בימי חול)' } // Updated to Le Relais De Venise
             ],
-            tuesday: [ // Corrected from 'monday' and date moved to 6.8
+            tuesday: [ // Updated date to 5.8
                 { time: '09:30-12:30', title: 'נוטינג היל ושוק פורטובלו', desc: 'סיור בשכונה הצבעונית ובשוק העתיקות המפורסם.', travel: 'Piccadilly Line ל-Notting Hill Gate.', category: 'shopping', icon: '🛍️', hours: 'נוטינג היל: 24/7; שוק פורטובלו: ימי שבת פעילות מלאה 09:00-19:00, ימי חול פעילות חלקית 10:00-17:00' },
                 { time: '12:30-13:30', title: 'Travel 67+ Shop', desc: 'חנות מזכרות בנוטינג היל, קשורה לסרט "נוטינג היל".', travel: 'בתוך נוטינג היל, על פורטובלו רוד.', category: 'shopping', icon: '🛍️', hours: '09:00-21:00' },
-                { time: '13:30-15:00', title: 'ארוחת צהריים בנוטינג היל', desc: 'בחירה ממגוון בתי הקפה והמסעדות באזור.', travel: 'בתוך השכונה.', category: 'food', icon: '🥗', hours: 'שעות משתנות' },
+                { time: '13:30-15:00', title: 'ארוחת צהריים בנוטינג היל', desc: 'בחירה ממגוון בתי הקפה והמסעדות באזור.', travel: 'בתוך השכונה.', category: 'food', icon: '�', hours: 'שעות משתנות' },
                 { time: '15:00-18:00', title: 'קמדן טאון ושוק קמדן', desc: 'חקירת השוק האלטרנטיבי הענק, עם דוכני בגדים, אמנות ואוכל.', travel: 'Northern Line ל-Camden Town מ-Notting Hill Gate (ייתכן החלפה).', category: 'shopping', icon: '🛍️', hours: 'קמדן טאון: 24/7; שוק קמדן: 10:00-18:00' },
                 { time: '18:00+', title: 'ערב חופשי', desc: 'ארוחת ערב באזור קמדן או חזרה למרכז העיר.', travel: 'טיוב.', category: 'food', icon: '🍝', hours: 'שעות משתנות' }
             ],
-            wednesday: [ // Corrected from 'tuesday' and date moved to 7.8
-                { time: '09:30-12:00', title: 'Battersea Power Station', desc: 'ביקור במתחם הקניות והבילויים החדשני בתחנת הכוח הישנה.', travel: 'טיוב ל-Victoria ומשם Northern Line ל-Battersea Power Station.', category: 'site', icon: '🏭', hours: 'חנויות ומסעדות: 10:00-21:00' },
-                { time: '12:00-13:00', title: 'קפה בבאטרסי', desc: 'עצירת קפה באחד מבתי הקפה במתחם.', travel: 'בתוך המתחם.', category: 'dessert', icon: '☕', hours: 'Monmouth Coffee: 07:00-18:00; B Bagel Soho / It’s Bagels Soho: 07:00-17:00 (שעות סניפים משתנות)' },
-                { time: '13:00-14:00', title: 'תחנת פאדינגטון', desc: 'ביקור בתחנה המפורסמת של הדוב פאדינגטון.', travel: 'טיוב מבאטרסי (Northern Line ל-Euston, ומשם Bakerloo Line לפאדינגטון) או אוטובוס ישיר.', category: 'site', icon: '🐻', hours: 'תחנת רכבת פעילה 24/7' },
-                { time: '14:00-15:00', title: 'אוקספורד סטריט ו-Selfridges', desc: 'הליכה על אוקספורד סטריט וביקור בחנות הכלבו היוקרתית Selfridges.', travel: 'טיוב מתחנת פאדינגטון ל-Bond Street או Marble Arch.', category: 'shopping', icon: '🛍️', hours: 'Selfridges: 10:00-21:00' },
-                { time: '15:00-16:00', title: 'הליכה ב-Regent Street', desc: 'הליכה מאוקספורד סירקוס (קצה אוקספורד סטריט) לאורך רחוב ריג\'נט היוקרתי עד כיכר פיקדילי, צפייה בחנויות הדגל והארכיטקטורה המרשימה.', travel: 'הליכה מ-Selfridges/Oxford Street.', category: 'shopping', icon: '🛍️', hours: 'חנויות: בדרך כלל 10:00-20:00' },
-                { time: '16:00-16:45', title: 'הליכה על פיקדילי סטריט', desc: 'טיול ברחוב האלגנטי עם חנויות יוקרה ובניינים היסטוריים, מכיכר פיקדילי לכיוון The Wolseley.', travel: 'הליכה מכיכר פיקדילי.', category: 'site', icon: '🚶‍♀️', hours: '24/7' },
-                { time: '16:45-18:15', title: 'Afternoon Tea ב-The Wolseley London', desc: 'חווית תה אחה"צ קלאסית ואלגנטית (מומלץ להזמין מקום מראש).', travel: 'על פיקדילי סטריט.', category: 'food', icon: '🍰', hours: 'תה אחה"צ: 15:00-18:30 (יש לוודא שעות)' },
-                { time: '18:15-19:00', title: 'סיבוב ב-Fortnum & Mason', desc: 'חנות כלבו יוקרתית עם דליקטסים, תה ומתנות.', travel: 'הליכה קצרה מ-Wolseley.', category: 'shopping', icon: '🛍️', hours: '10:00-20:00' },
-                { time: '19:30+', title: 'ארוחת ערב', desc: 'באזור מרכז העיר.', travel: 'טיוב.', category: 'food', icon: '🍝', hours: 'שעות משתנות' }
+            wednesday: [ // Updated date to 6.8
+                { time: '09:00-11:30', title: 'Battersea Power Station', desc: 'ביקור במתחם הקניות והבילויים החדשני בתחנת הכוח הישנה.', travel: 'טיוב ל-Victoria ומשם Northern Line ל-Battersea Power Station.', category: 'site', icon: '🏭', hours: 'חנויות ומסעדות: 10:00-21:00' }, // Adjusted start time to 09:00
+                { time: '11:30-12:30', title: 'קפה בבאטרסי', desc: 'עצירת קפה באחד מבתי הקפה במתחם.', travel: 'בתוך המתחם.', category: 'dessert', icon: '☕', hours: 'Monmouth Coffee: 07:00-18:00; B Bagel Soho / It’s Bagels Soho: 07:00-17:00 (שעות סניפים משתנות)' },
+                { time: '12:30-13:30', title: 'תחנת פאדינגטון', desc: 'ביקור בתחנה המפורסמת של הדוב פאדינגטון.', travel: 'טיוב מבאטרסי (Northern Line ל-Euston, ומשם Bakerloo Line לפאדינגטון) או אוטובוס ישיר.', category: 'site', icon: '🐻', hours: 'תחנת רכבת פעילה 24/7' },
+                { time: '13:30-14:30', title: 'מוזיאון MOCO', desc: 'מוזיאון לאמנות מודרנית ועכשווית, ממוקם ב-Marble Arch. מציג יצירות של אמנים כמו בנקסי ואנדי וורהול.', travel: 'Central Line מתחנת Paddington ל-Marble Arch.', category: 'site', icon: '🖼️', hours: '10:00-19:00' }, // Added MOCO Museum
+                { time: '14:30-15:30', title: 'אוקספורד סטריט ו-Selfridges', desc: 'הליכה על אוקספורד סטריט וביקור בחנות הכלבו היוקרתית Selfridges.', travel: 'הליכה קצרה מ-Marble Arch.', category: 'shopping', icon: '🛍️', hours: 'Selfridges: 10:00-21:00' },
+                { time: '15:30-16:15', title: 'הליכה ב-Regent Street', desc: 'הליכה מאוקספורד סירקוס (קצה אוקספורד סטריט) לאורך רחוב ריג\'נט היוקרתי עד כיכר פיקדילי, צפייה בחנויות הדגל והארכיטקטורה המרשימה.', travel: 'הליכה מ-Selfridges/Oxford Street.', category: 'shopping', icon: '🛍️', hours: 'חנויות: בדרך כלל 10:00-20:00' },
+                { time: '16:15-17:00', title: 'הליכה על פיקדילי סטריט וסיבוב ב-Fortnum & Mason', desc: 'טיול ברחוב האלגנטי עם חנויות יוקרה ובניינים היסטוריים, מכיכר פיקדילי לכיוון Fortnum & Mason, וחנות כלבו יוקרתית עם דליקטסים, תה ומתנות.', travel: 'הליכה מכיכר פיקדילי.', category: 'shopping', icon: '🛍️', hours: 'Fortnum & Mason: 10:00-20:00' }, // Combined and adjusted time
+                { time: '19:30+', title: 'ארוחת ערב', desc: 'באזור מרכז העיר.', travel: 'טיוב.', category: 'food', icon: '🍝', hours: 'שעות משתנות' } // Adjusted time
             ],
-            thursday: [ // Corrected from 'wednesday' and date moved to 8.8
+            thursday: [ // Updated date to 7.8
                 { time: 'יום חופשי', title: 'יום חופשי להשלמות וקניות אחרונות', desc: 'יום פנוי להשלמות, קניות אחרונות, ביקור חוזר במקום שאהבתן במיוחד, או פשוט מנוחה לפני הטיסה הביתה.', travel: 'לפי בחירה אישית.', category: 'logistic', icon: '😴', hours: 'לפי בחירה אישית' }
             ]
         };
@@ -220,12 +217,15 @@
         function createItineraryCard(item) {
             const colorClass = categoryColors[item.category] || categoryColors.default;
             const hoursDisplay = item.hours ? `<p class="text-xs text-gray-500 mt-1"><strong class="font-semibold">שעות פתיחה:</strong> ${item.hours}</p>` : '';
+            // Add a booked indicator if the item is booked
+            const bookedIndicator = item.booked ? `<span class="text-green-600 font-bold mr-2">✅ הוזמן!</span>` : '';
+
             return `
                 <div class="bg-white p-4 rounded-lg shadow-md border-r-4 ${colorClass} flex items-start gap-4" data-category="${item.category}">
                     <div class="text-2xl">${item.icon}</div>
                     <div class="flex-grow">
                         <div class="flex justify-between items-center">
-                            <h3 class="font-bold text-lg">${item.title}</h3>
+                            <h3 class="font-bold text-lg">${item.title} ${bookedIndicator}</h3>
                             <span class="text-sm font-semibold text-gray-600">${item.time}</span>
                         </div>
                         <p class="text-gray-700 mt-1">${item.desc}</p>
@@ -267,3 +267,4 @@
 
 </body>
 </html>
+�
